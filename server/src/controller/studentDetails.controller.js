@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
   const studentData = await studentDetailsSchema.find().populate("resultsId");
-  return res.status(200).json({ data: studentData });
+  return res.status(200).json({ message: "student Data"});
 });
 
 router.get("/:id", async (req, res) => {
